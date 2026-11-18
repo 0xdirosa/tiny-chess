@@ -18,9 +18,12 @@ Original engine, written from scratch for this bounty:
   fully deterministic, no clock, no randomness), so a game replays
   move-for-move
 - A compact opening book of precomputed winning lines for practice
-  games 3–6 (Stockfish depth-20 analysis, verified by replaying each
+  games 3–6 (Stockfish analysis, verified by replaying each
   line against the real house opponent), with the search as fallback
-  for games 1–2 and for any other trial/final opening
+  for games 1–2 and for any other trial/final opening. The book is
+  mixed per game, best line wins: games 3 and 5 use depth-20 lines,
+  games 4 and 6 use depth-28 lines (game 4: 50 plies, game 6:
+  48 plies — both much faster than their depth-20 lines).
 
 Size-driven omissions (the 4,096-byte cap forced trade-offs):
 no null-move pruning, no late-move reductions, no killer/history
@@ -30,8 +33,8 @@ beats the depth-2/depth-3 practice opponents.
 
 ## Results (local trial-0, kit harness)
 
-- 6 games, 6 wins, Elo 2110 (cap), spare_plies 677
-  (book games 3–6: 65/64/41/80 plies; fallback game 1 won in 73
+- 6 games, 6 wins, Elo 2110 (cap), spare_plies 723
+  (book games 3–6: 65/50/41/48 plies; fallback game 1 won in 73
   plies, game 2 won by adjudication at the 200-ply cap).
   Trial-1 (different openings) verified the book stays off:
   fallback alone 2 wins / 1 draw / 3 losses, Elo 1,191 —
