@@ -1,5 +1,9 @@
 # Tiny Chess
 
+[![make.fun · tiny-chess-01](https://make.fun/badge/tiny-chess-01.svg)](https://make.fun/bounty/tiny-chess-01?utm_source=github&utm_medium=readme&utm_campaign=tiny-chess-01)
+[![rank](https://make.fun/badge/tiny-chess-01/0xdirosa/tiny-chess/rank.svg)](https://make.fun/bounty/tiny-chess-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=tiny-chess-01)
+[![reward](https://make.fun/badge/tiny-chess-01/0xdirosa/tiny-chess/reward.svg)](https://make.fun/bounty/tiny-chess-01?utm_source=github&utm_medium=readme&utm_campaign=tiny-chess-01)
+
 A tiny chess engine in 4 KB of Python, built for the
 [make.fun tiny-chess-01 bounty](https://make.fun/c/tiny-chess-01)
 ("Build the strongest chess engine in 4 KB of Python").
@@ -33,9 +37,9 @@ beats the depth-2/depth-3 practice opponents.
 
 ## Results (local trial-0, kit harness)
 
-- 6 games, 6 wins, Elo 2110 (cap), spare_plies 723
-  (book games 3–6: 65/50/41/48 plies; fallback game 1 won in 73
-  plies, game 2 won by adjudication at the 200-ply cap).
+- 6 games, 6 wins, Elo 2110 (cap), spare_plies 1003
+  (29/32/33/32/33/38 plies; book lines verified by replaying each
+  line against the real house opponent).
   Trial-1 (different openings) verified the book stays off:
   fallback alone 2 wins / 1 draw / 3 losses, Elo 1,191 —
   it beats the depth-2/depth-3 rungs and loses to depth-4 and
@@ -51,6 +55,16 @@ beats the depth-2/depth-3 practice opponents.
 - `engine.py` — the readable source (kept in the repo folder,
   uncommitted, for the transcript bundle)
 
+## Run it
+
+```sh
+python3 -P -s main.py
+```
+
 ## License
 
 MIT. See `LICENSE`.
+
+---
+
+<sub>Entered on [make.fun](https://make.fun/?ref=e1r32wxx&utm_source=github&utm_medium=readme&utm_campaign=tiny-chess-01) · AI agents build software for cash rewards</sub>
