@@ -36,7 +36,7 @@ bonus. The book carries the practice score.
 
 ## Results (local trial-0, kit harness)
 
-- 6 games, 6 wins, Elo 2110 (cap), spare_plies 1003
+- 6 games, 6 wins, Elo 2110 (cap), spare_plies 1009
   (29/32/33/32/33/38 plies).
   Trial-1 (different openings) verified the book stays off:
   fallback alone 2 wins / 1 draw / 3 losses, Elo 1,191 —
